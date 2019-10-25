@@ -31,7 +31,7 @@ async function start() {
     model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
-    Var a = tf.tensor([1, 2]);
+    var a = tf.tensor([1, 2]);
     console.log('a shape:', a.shape);
     var pred = model.predict(a);
     console.log('pred:', pred);

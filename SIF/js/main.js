@@ -46,5 +46,6 @@ allow input
 function allowinput() {
     document.getElementById('status').innerHTML = 'Model Loaded';
     document.getElementById("button").disabled = false;
+    $('button').prop('disabled', false);
 }
 

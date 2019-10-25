@@ -27,7 +27,7 @@ function displayme(){
 load the model
 */
 async function start() { 
-    //load the model sdsd
+    //load the model
     model = await tf.loadLayersModel('models/model.json')
     
     //warm up 

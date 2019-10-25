@@ -1,29 +1,36 @@
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <title>SIF Calculation</title>
 </head>
+    
 <body>
+        
+    <!-- TensorFlow.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+    
+    <!-- main script -->
+    <script type="text/javascript" src="./js/main.js"></script>
  
-<div id="Pentagon">
-  <h1>SIF Calculation</h1>
-  <ul>
-    <li>
-      <p>
-        Calculate SIF:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/edit/master/SIF" target="_blank">Source Code</a>
-      </p>
-      <span>a= <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;
-      b= <input type="text" id="field2" placeholder="0" /></span>
-      <input type="button" id ="button" value="="  onclick="displayme()"/>
-      <p>
-      <span>SIF= </span>
-      <input type="text" value="" id="output" placeholder="0" />
-      </p>
-    </li>
-  </ul>
-</div>
-
-<script type="text/javascript" src="./js/main.js"></script>
+    <div id="Pentagon">
+      <h1>SIF Calculation</h1>
+      <ul>
+        <li>
+          <p>
+            Calculate SIF:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/edit/master/SIF" target="_blank">Source Code</a>
+          </p>
+          <span>a= <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;
+          b= <input type="text" id="field2" placeholder="0" /></span>
+          <input type="button" id ="button" value="="  onclick="displayme()"/>
+          <p>
+          <span>SIF= </span>
+          <input type="text" value="" id="output" placeholder="0" />
+          </p>
+        </li>
+      </ul>
+    </div>
     
 </body>
+    
 </html>

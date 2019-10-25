@@ -26,7 +26,7 @@ function displayme(){
 /*
 load the model
 */
-async function start(cur_mode) { 
+async function start() { 
     //load the model 
     model = await tf.loadLayersModel('../models/model.json')
     

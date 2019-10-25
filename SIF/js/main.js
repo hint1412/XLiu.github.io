@@ -31,7 +31,7 @@ async function start() {
     model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
-    //model.predict(tf.zeros([2,]))
+    model.predict(tf.zeros([,2]))
     
     //allow drawing on the canvas 
     allowinput()
@@ -46,6 +46,6 @@ allow input
 function allowinput() {
     document.getElementById('status').innerHTML = 'Model Loaded';
     document.getElementById("button").disabled = false;
-    $('button').prop('disabled', false);
+    //$('button').prop('disabled', false);
 }
 

@@ -31,7 +31,10 @@ async function start() {
     model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
-    model.predict(tf.zeros([,2]))
+    Var a = tf.tensor([1, 2]);
+    console.log('a shape:', a.shape);
+    var pred = model.predict(a);
+    console.log('pred:', pred);
     
     //allow drawing on the canvas 
     allowinput()

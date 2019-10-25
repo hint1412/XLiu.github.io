@@ -4,31 +4,9 @@
     <title>SIF Calculation</title>
 </head>
 <body>
-<input type="number" id="num1">
-<select name="" id="symbol">
-    <option value="+">+</option>
-    <option value="-">-</option>
-    <option value="*">x</option>
-    <option value="/">÷</option>
-</select>
-<input type="number" id="num2">
-<input type="button" value="计算" id="result">
-<input type="text" id="showResult">
-<script>
-(function(){
-    var n1 = document.getElementById('num1'),
-        n2 = document.getElementById('num2'),
-        s = document.getElementById('symbol'),
-        rs = document.getElementById('result'),
-        sr = document.getElementById('showResult');
-    rs.onclick = function(ev){
-        sr.value = n1.value + ' ' +  s.value + ' ' + n2.value + ' = ' + (eval('(' + n1.value + s.value + n2.value + ')'));
-    };
-})();
-</script>
-    
-<div id="demo">
-  <h2>demo展示</h2>
+ 
+<div id="Pentagon">
+  <h1>SIF Calculation</h1>
   <ul>
     <li>
       <p>
@@ -45,6 +23,8 @@
     </li>
   </ul>
 </div>
+
+<script type="text/javascript" src="../js/main.js"></script>
     
 </body>
 </html>

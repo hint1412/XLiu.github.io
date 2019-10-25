@@ -44,7 +44,7 @@ async function start() {
 allow input
 */
 function allowinput() {
-    //document.getElementById('status').innerHTML = 'Model Loaded';
+    document.getElementById('status').innerHTML = 'Model Loaded';
     $('button').prop('disabled', false);
 }
 

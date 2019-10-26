@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>SIF Calculation</title>
-</head>
-    
-<body>
+	
+    <!-- bs4 css -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
+    
     <!-- TensorFlow.js script -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
     
     <!-- main script -->
     <script type="text/javascript" src="js/main.js"></script>
 	
+</head>
+    
+<body>       	
     <!-- Brand/logo -->    
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
-         <a class="navbar-brand" href="#"><h1>SIF Calculation</h1></a>
+        <a class="navbar-brand" href="#"><h1>SIF Calculation</h1></a>
     </nav>
 	
     <div id="Pentagon">
-      <h4 id ='status' >Loading Model... </h4>	
-      <ul>
-        <li>
-          <p>
-          Calculate SIF:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
-          </p>
-          
-          <p>
-          <span>a = <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;              
-          w = <input type="text" id="field2" placeholder="0" /></span>
-          <button type="button" id ="button" onclick ='displayme()' disabled>=</button>   
-          </p>
-		
-          <p>
-          <span>SIF = </span>
-          <input type="text" value="" id="output" placeholder="0" />
-          </p>
-        </li>
-      </ul>
+        <h4 id ='status' >Loading Model... </h4>
+        <ul>
+            <li>
+		    
+              <p>
+                Calculate SIF:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
+              </p>
+              
+              <p>
+                <span>a = <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;              
+                w = <input type="text" id="field2" placeholder="0" /></span>
+                <button type="button" id ="button" onclick ='displayme()' disabled>=</button>   
+              </p>
+            
+              <p>
+                 <span>SIF = </span>
+                 <input type="text" value="" id="output" placeholder="0" />
+              </p>
+		    
+            </li>
+        </ul>
     </div>
     
 </body>

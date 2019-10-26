@@ -10,12 +10,12 @@ function displayme(){
     var a = parseFloat(document.getElementById("field1").value);
     var b = parseFloat(document.getElementById("field2").value);
     var w = parseFloat(document.getElementById("field3").value);
-    var sif = function(x,y){
+    var sif = function(a,b,w){
         var inputs = tf.tensor([[a/b, w/b]]);
         var outputs = model.predict(inputs).dataSync();
         return outputs;
     };
-    document.getElementById("output").value = sif(x,y);
+    document.getElementById("output").value = sif(a,b,w);
 }
 
 /*

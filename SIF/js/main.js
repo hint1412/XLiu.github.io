@@ -7,8 +7,8 @@ var model;
 display after click
 */
 function displayme(){
-    var x = parseInt(document.getElementById("field1").value);
-    var y = parseInt(document.getElementById("field2").value);
+    var x = parseFloat(document.getElementById("field1").value);
+    var y = parseFloat(document.getElementById("field2").value);
     var sif = function(x,y){
         var inputs = tf.tensor([[x, y]]);
         var outputs = model.predict(inputs).dataSync();

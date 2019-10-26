@@ -31,9 +31,9 @@ async function start() {
     model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
-    var a = tf.tensor([[1, 2]]);
+    const a = tf.tensor([[1, 2]]);
     console.log('a shape:', a.shape, a.dtype);
-    var pred = model.predict(a);
+    const pred = model.predict(a).dataSync();
     console.log('pred:', pred);
     
     //allow drawing on the canvas 

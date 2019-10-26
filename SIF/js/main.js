@@ -33,9 +33,6 @@ async function start() {
     
     //allow drawing on the canvas 
     allowinput()
-    
-    //load the class names
-    //await loadDict()
 }
 
 /*

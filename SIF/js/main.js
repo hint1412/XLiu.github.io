@@ -12,7 +12,6 @@ function displayme(){
     var sif = function(x,y){
         var inputs = tf.tensor([[x, y]]);
         var outputs = model.predict(inputs).dataSync();
-        }
         return outputs;
     };
     document.getElementById("output").value = sif(x,y);

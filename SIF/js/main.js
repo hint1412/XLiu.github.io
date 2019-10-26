@@ -32,7 +32,7 @@ async function start() {
     
     //warm up 
     var a = tf.tensor([[1, 2]]);
-    console.log('a shape:', a.shape);
+    console.log('a shape:', a.shape, a.dtype);
     var pred = model.predict(a);
     console.log('pred:', pred);
     

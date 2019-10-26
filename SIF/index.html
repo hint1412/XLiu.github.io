@@ -23,28 +23,32 @@
         <a class="navbar-brand" href="#"><h1>SIF Calculation</h1></a>
     </nav>
 	
-    <div id="Pentagon">
-        <h4 id ='status' >Loading Model... </h4>
-        <ul>
-            <li>
-		    
-              <p>
-                Calculate SIF:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
-              </p>
-              
-              <p>
-                <span>a = <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;              
-                w = <input type="text" id="field2" placeholder="0" /></span>
-                <button type="button" id ="button" onclick ='displayme()' disabled>=</button>   
-              </p>
-            
-              <p>
-                 <span>SIF = </span>
-                 <input type="text" value="" id="output" placeholder="0" />
-              </p>
-		    
-            </li>
-        </ul>
+    <div id="Microcantilever">
+		<div class="col" style ='margin-left:100px;'>
+			<h5 id ='status' >Loading Model... </h5>
+
+			<ul>
+				<li>
+
+				  <p>
+					Pre-notched Pentagonal Cross-section Cantilevers:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
+				  </p>
+
+				  <p>
+					<span>a = <input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;              
+					w = <input type="text" id="field2" placeholder="0" /></span>
+					<button type="button" id ="button" onclick ='displayme()' disabled>=</button>   
+				  </p>
+
+				  <p>
+					 <span>SIF = </span>
+					 <input type="text" value="" id="output" placeholder="0" />
+				  </p>
+
+				</li>
+			</ul>
+			
+		</div>
     </div>   
 </body>
 	

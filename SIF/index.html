@@ -32,117 +32,86 @@
         </a>
     </nav>
     
-    <div class="container">
-        <div id="Microcantilever">
-            <div class="col" style ='margin-left:70px;'>
-                <br>
-                <h4 id ='status' >Loading Model... </h4>
-                <hr class="my-4">
-
-                <ul>
-                    <li>
-
-                        <p>
-                            <b>Pre-notched Pentagonal Cross-section Cantilevers:</b>&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
-                        </p>
-
-                        <p>
-                            <span><i>a = </i><input type="text" id="field1" placeholder="0" />&nbsp;&nbsp;              
-                            <i>w = </i><input type="text" id="field2" placeholder="0" /></span>&nbsp;&nbsp;
-                            <button type="button" class="btn btn-outline-success" id ="button" onclick ='displayme()' disabled><b>=</b></button>   
-                        </p>
-
-                        <p>
-                            <span><em>SIF = </em></span>
-                            <input type="text" value="" id="output" placeholder="0" disabled/>
-                        </p>
-
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-	</div>
-    
- <div class="container">
-
-    <!-- Extended material form grid -->
-    <form>
-      <!-- Grid row -->
-      <div class="form-row">
-        <!-- Grid column -->
-        <div class="col-md-3">
-          
-          <!-- Material input -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">&nbsp;a&nbsp;</span>
-            </div>
-            <input type="text" class="form-control" placeholder="0">
-          </div>
-          
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3">
-          <!-- Material input -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">&nbsp;b&nbsp;</span>
-            </div>
-            <input type="text" class="form-control" placeholder="0">
-          </div>
-        </div>
-        <!-- Grid column -->
+    <div class="container my-4">
+        <h4>
+            Pre-notched Pentagonal Cross-section Cantilevers:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
+        </h4>
+        <hr class="my-4">
         
-        <!-- Grid column -->
-        <div class="col-md-3">
-          <!-- Material input -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">&nbsp;w&nbsp;</span>
+        <!-- Form begins -->
+        <form>
+          <!-- Grid row -->
+          <div class="form-row">
+            <!-- Grid column -->
+            <div class="col-md-3">
+              
+              <!-- Material input -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">&nbsp;a&nbsp;</span>
+                </div>
+                <input type="text" id="field1" class="form-control" placeholder="0">
+              </div>
+              
             </div>
-            <input type="text" class="form-control" placeholder="0">
-          </div>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
+            <!-- Grid column -->
 
-      <!-- Grid row -->
-      <div class="row">
-        <!-- Grid column -->
-        <div class="col-md-6">
-          <!-- Material input -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">&nbsp;SIF&nbsp;</span>
+            <!-- Grid column -->
+            <div class="col-md-3">
+              <!-- Material input -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">&nbsp;b&nbsp;</span>
+                </div>
+                <input type="text" id="field2" class="form-control" placeholder="0">
+              </div>
             </div>
-            <input type="text" class="form-control" placeholder="0">            
+            <!-- Grid column -->
+            
+            <!-- Grid column -->
+            <div class="col-md-3">
+              <!-- Material input -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">&nbsp;w&nbsp;</span>
+                </div>
+                <input type="text" id="field3" class="form-control" placeholder="0" >
+              </div>
+            </div>
+            <!-- Grid column -->
           </div>
-          
-        </div>
-        <!-- Grid column -->
+          <!-- Grid row -->
+
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6">
+              <!-- Material input -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">&nbsp;SIF&nbsp;</span>
+                </div>
+                <input type="text" id="output" class="form-control" placeholder="0"disabled>            
+              </div>
+              
+            </div>
+            <!-- Grid column -->
+            
+            <!-- Grid column -->
+            <div class="col-md-3">
+              <!-- Material input -->        
+                <button type="button" class="btn btn-success btn-block" id ="button" onclick ='displayme()' disabled><b>Run</b></button> 
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+
+        </form>
+        <!-- Form ends -->
         
-        <!-- Grid column -->
-        <div class="col-md-3">
-          <!-- Material input -->        
-        	<button type="button" class="btn btn-outline-success btn-block" id ="button" onclick ='displayme()' disabled><b>=</b></button> 
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-
-    </form>
-    <!-- Extended material form grid -->
-
-    
-    
-    
-  </div>
+    </div>
     
 </body>
 	

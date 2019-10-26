@@ -7,10 +7,11 @@ var model;
 display after click
 */
 function displayme(){
-    var x = parseFloat(document.getElementById("field1").value);
-    var y = parseFloat(document.getElementById("field2").value);
+    var a = parseFloat(document.getElementById("field1").value);
+    var b = parseFloat(document.getElementById("field2").value);
+    var w = parseFloat(document.getElementById("field3").value);
     var sif = function(x,y){
-        var inputs = tf.tensor([[x, y]]);
+        var inputs = tf.tensor([[a/b, w/b]]);
         var outputs = model.predict(inputs).dataSync();
         return outputs;
     };

@@ -7,15 +7,19 @@ var model;
 display after click
 */
 function displayme(){
-    var a = parseFloat(document.getElementById("field1").value);
-    var b = parseFloat(document.getElementById("field2").value);
-    var w = parseFloat(document.getElementById("field3").value);
-    var sif = function(a,b,w){
+    var a = parseFloat(document.getElementById("input_a").value);
+    var b = parseFloat(document.getElementById("input_b").value);
+    var w = parseFloat(document.getElementById("input_w").value);
+    var l0 = parseFloat(document.getElementById("input_l0").value);
+    var l1 = parseFloat(document.getElementById("input_l1").value);
+    var P = parseFloat(document.getElementById("input_P").value);
+    var KP = function(a,b,w,l0,l1){
         var inputs = tf.tensor([[a/b, w/b]]);
         var outputs = model.predict(inputs).dataSync();
         return outputs;
     };
-    document.getElementById("output").value = sif(a,b,w);
+    document.getElementById("output_KP").value = KP(a,b,w,l0,l1);
+    document.getElementById("output_K").value = 0.0;
 }
 
 /*
@@ -43,4 +47,3 @@ function allowinput() {
     document.getElementById("button").disabled = false;
     //$('button').prop('disabled', false);
 }
-

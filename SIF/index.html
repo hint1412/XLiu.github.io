@@ -18,98 +18,295 @@
 
     <!-- TensorFlow.js script -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-
+    
+    <!-- Mathjax script -->    
+    <!--  
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+     -->
+    
     <!-- main script -->
     <script type="text/javascript" src="js/main.js"></script>	
+    
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+    
+    <!-- Internal CSS -->
+    <style> 
+        @font-face{ 
+            font-family: 'MyWebFont';
+            src: url('css/lmroman10-italic-webfont.woff');
+        } 
+        
+        .lm {
+            font-family: 'MyWebFont';            
+        }  
+    </style>
+    
+    <style type="text/css">         
+        .lightblue { background-color: #F5FFFA !important; } 
+        .input-group>.input-group-prepend { flex: 0 0 30% !important; }
+        .input-group>.input-group-append { flex: 0 0 20% !important; }
+        .input-group .input-group-text { width: 100% !important; }
+    </style>
 </head>
     
-<body>     	
-    <!-- Brand/logo -->    
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <a class="navbar-brand mb-0 h1" href="#">
-        <h1><img src="images/Kaito_Kid_signature.svg" width="36" height="42" class="d-inline-block align-top" alt="">
-        &nbsp;&nbsp;SIF Calculator</h1>
-        </a>
-    </nav>
+<body>
+    <div class="container.fluid">     	
+		<!-- Brand/logo -->    
+		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+			<a class="navbar-brand mb-0" href="#">
+			<img src="images/logo.svg" class="img-fluid ml-3" width="600" height="80" 
+				 class="d-inline-block align-top" alt="Stress Intensity Factor Calculator">
+			</a>
+		</nav>
+	</div>
     
-    <div class="container my-4">
-        <h4>
-            Pre-notched Pentagonal Cross-section Cantilevers:&nbsp;&nbsp;<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" target="_blank">Source Code</a>
-        </h4>
-
-        <hr class="my-4">
-        <h6 id ='status' style="color:#99ccff"><i>Loading Model...</i></h6>    
-        
+    <div class="container ml-5 my-3">     
         <!-- Form begins -->
         <form>
-          <!-- Grid row -->
-          <div class="form-row">
-            <!-- Grid column -->
-            <div class="col-md-3">
-              
-              <!-- Material input -->
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">&nbsp;<b>a</b>&nbsp;</span>
-                </div>
-                <input type="text" id="field1" class="form-control" placeholder="0">
-              </div>
-              
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3">
-              <!-- Material input -->
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">&nbsp;<b>b</b>&nbsp;</span>
-                </div>
-                <input type="text" id="field2" class="form-control" placeholder="0">
-              </div>
-            </div>
-            <!-- Grid column -->
+			<!-- Grid row #1 -->
+			<div class="form-row">
+				<!-- Grid column #1.1 -->
+				<div class="col-md-12 mb-1">              
+					<!-- Material input -->
+					<h4>
+						Pre-notched Pentagonal Cross-section Cantilevers:&nbsp;&nbsp;
+						<a href="https://github.com/hint1412/XLiu.github.io/tree/master/SIF" 
+						   target="_blank">Source Code</a>
+					</h4>		  
+				</div>
+				<!-- Grid column #1.1 -->
+			</div>			
+			<!-- Grid row #1 -->
             
-            <!-- Grid column -->
-            <div class="col-md-3">
-              <!-- Material input -->
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">&nbsp;<b>w</b>&nbsp;</span>
-                </div>
-                <input type="text" id="field3" class="form-control" placeholder="0" >
-              </div>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-
-          <!-- Grid row -->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <!-- Material input -->
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">&nbsp;<b>SIF</b>&nbsp;</span>
-                </div>
-                <input type="text" id="output" class="form-control" placeholder="0"disabled>            
-              </div>
-              
-            </div>
-            <!-- Grid column -->
+            <!-- Grid row #2 -->
+			<div class="form-row"> 
+                <div class="card-group">            
+                    <!-- Grid column #2.1 -->
+                    <div class="col-md-6 my-2 card p-3"> 
+                        <!-- Material input --> 
+                        <img src="images/Notched_cantilever_sketch.png" class="img-fluid" 
+                             alt="Stress Intensity Factor Calculator">
+                    </div>
+                    <!-- Grid column #2.1 -->	
+                    
+                    <!-- Grid column #2.2 -->
+                    <div class="col-md-6 my-2 card p-3"> 
+                        <!-- Material input --> 
+                        <div class="embed-responsive embed-responsive-16by9">   
+                            <iframe class="embed-responsive-item" 
+                            src="https://3dwarehouse.sketchup.com/embed/9658ccab-6ac3-4b89-a23f-635206942357" 
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                            width="580" height="326" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Grid column #2.2 --> 
+                </div>                
+			</div>			
+			<!-- Grid row #2 -->
             
-            <!-- Grid column -->
-            <div class="col-md-3">
-              <!-- Material input -->        
-                <button type="button" class="btn btn-success btn-block" id ="button" onclick ='displayme()' disabled><b>Run</b></button> 
-            </div>
-            <!-- Grid column -->
+		    <!-- Grid row #3 -->
+			<div class="form-row">				
 
-          </div>
-          <!-- Grid row -->
+                <!-- Grid column #3.1 -->
+                <div class="col-md-12 card p-3 lightblue my-2"> 
+                
+                    <!-- Grid row #3.1.1 -->
+                    <div class="form-row">
+                        <!-- Grid column #3.1.1.1 -->
+                        <div class="col-md-12 mb-2">              
+                            <!-- Material input -->								
+                            <h5 id ='status' style="color:#007bff"><i>Loading Model...</i></h5>  		
+                            <hr class="my-1">								
+                        </div>
+                        <!-- Grid column #3.1.1.1 -->
+                    </div>			
+                    <!-- Grid row #3.1.1 -->
+                  
+                    <!-- Grid row #3.1.2 -->
+                    <div class="form-row">		    
+                        <!-- Grid column #3.1.2.1 -->
+                        <div class="col-md-4">              
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>a</b>
+                                    </span>
+                                </div>                                  
+                                <input type="text" id="input_a" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>&mu;m</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.2.1 -->
 
+                        <!-- Grid column #3.1.2.2 -->
+                        <div class="col-md-4">
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>b</b>
+                                    </span>
+                                </div>
+                                <input type="text" id="input_b" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>&mu;m</i>
+                                    </span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.2.2 -->
+                    
+                        <!-- Grid column #3.1.2.3 -->
+                        <div class="col-md-4">
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>w</b>
+                                    </span>
+                                </div>
+                                <input type="text" id="input_w" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>&mu;m</i>
+                                    </span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.2.3 -->
 
+                    </div>
+                    <!-- Grid row #3.1.2 -->
+
+                    <!-- Grid row #3.1.3 -->
+                    <div class="form-row">
+                        <!-- Grid column #3.1.3.1 -->
+                        <div class="col-md-4">              
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>L<sub>0</sub></b>
+                                    </span>
+                                </div>
+                                <input type="text" id="input_l0" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>&mu;m</i>
+                                    </span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.3.1 -->
+
+                        <!-- Grid column #3.1.3.2 -->
+                        <div class="col-md-4">              
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>L<sub>1</sub></b>
+                                    </span>
+                                </div>
+                                <input type="text" id="input_l1" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>&mu;m</i>
+                                    </span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.3.2 -->
+                        
+                        <!-- Grid column #3.1.3.3 -->
+                        <div class="col-md-4">
+                            <!-- Material input -->        
+                            <button type="button" class="btn btn-success btn-lg btn-block" id ="button" 
+                                    aria-disabled="true" onclick ='displayme()' disabled><b>Run</b></button> 
+                        </div>
+                        <!-- Grid column #3.1.3.3 -->                        
+
+                    </div>
+                    <!-- Grid row #3.1.3 -->
+                    
+                    <!-- Grid row #3.1.4 -->
+                    <div class="form-row mt-0">
+                        <!-- Grid column #3.1.4.1 -->
+                        <div class="col-md-12 mb-2">              
+                            <!-- Material input -->								  		
+                            <hr class="mt-0 mb-1">								
+                        </div>
+                        <!-- Grid column #3.1.4.1 -->
+                    </div>			
+                    <!-- Grid row #3.1.4 -->
+                    
+                    <!-- Grid row #3.1.5 -->
+                    <div class="form-row">
+                        <!-- Grid column #3.1.5.1 -->
+                        <div class="col-md-4">
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>Kb<sup>1.5</sup>/P</b>
+                                    </span>
+                                </div>
+                                <input type="text" id="output_KP" class="form-control" placeholder="0.0"disabled>            
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.5.1 -->
+                        
+                        <!-- Grid column #3.1.5.2 -->
+                        <div class="col-md-4">
+                            <div class="input-group input-group-lg mb-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>P</b>
+                                    </span>
+                                </div>
+                                <input type="text" id="input_P" class="form-control" placeholder="0.0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>mN</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.5.2 -->   
+                    
+                        <!-- Grid column #3.1.5.3 -->
+                        <div class="col-md-4">
+                            <!-- Material input -->
+                            <div class="input-group input-group-lg mb-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lm justify-content-center">
+                                        <b>K</b>
+                                    </span>
+                                </div>
+                                <input type="text" id="output_K" class="form-control" placeholder="0.0"disabled>            
+                                <div class="input-group-append">
+                                    <span class="input-group-text justify-content-center">
+                                        <i>MPa m<sup>0.5</sup></i>
+                                    </span>
+                                </div>                            
+                            </div>
+                        </div>
+                        <!-- Grid column #3.1.5.3 -->
+                    </div>
+                    <!-- Grid row #3.1.5 -->	
+                    
+                </div>
+                <!-- Grid column #3.1 -->							
+			</div>
+			<!-- Grid row #3 -->
         </form>
         <!-- Form ends -->
         

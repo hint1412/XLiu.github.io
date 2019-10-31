@@ -28,7 +28,7 @@ load the model
 */
 async function start() { 
     //load the model
-    const model = await tf.loadLayersModel('models/model.json')
+    var model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
     var a = tf.tensor([[1, 2]]);

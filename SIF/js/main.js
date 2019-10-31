@@ -13,7 +13,6 @@ function displayme(){
     var l0 = parseFloat(document.getElementById("input_l0").value);
     var l1 = parseFloat(document.getElementById("input_l1").value);
     var P = parseFloat(document.getElementById("input_P").value);
-    console.log(a,b,w,l0,l1,P);
     var KP = function(a,b,w,l0,l1){
         var inputs = tf.tensor([[a/b, w/b]]);
         var outputs = model.predict(inputs).dataSync();
@@ -28,7 +27,7 @@ load the model
 */
 async function start() { 
     //load the model
-    var model = await tf.loadLayersModel('models/model.json')
+    model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
     var a = tf.tensor([[1, 2]]);

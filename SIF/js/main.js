@@ -19,8 +19,10 @@ function displayme(){
         var kop = outputs*l1*Math.pow(a, 0.5)/b/w/w;
         return kop;
     };
-    document.getElementById("output_KP").value = KP(a,b,w,l0,l1);
-    document.getElementById("output_K").value = KP(a,b,w,l0,l1)*P;
+    var KP_o = KP(a,b,w,l0,l1);
+    var K_o = KP(a,b,w,l0,l1)*P;
+    document.getElementById("output_KP").value = KP_o.toFixed(3);
+    document.getElementById("output_K").value = K_o.toFixed(3);
 }
 
 /*

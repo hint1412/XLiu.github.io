@@ -7,12 +7,12 @@ var model;
 display after click
 */
 function displayme(){
-    var a = parseFloat(document.getElementById("input_a").value);
-    var b = parseFloat(document.getElementById("input_b").value);
-    var w = parseFloat(document.getElementById("input_w").value);
-    var l0 = parseFloat(document.getElementById("input_l0").value);
-    var l1 = parseFloat(document.getElementById("input_l1").value);
-    var P = parseFloat(document.getElementById("input_P").value);    
+    var a = parseFloat(document.getElementById("input_a").value) || 0.0;
+    var b = parseFloat(document.getElementById("input_b").value) || 0.0;
+    var w = parseFloat(document.getElementById("input_w").value) || 0.0;
+    var l0 = parseFloat(document.getElementById("input_l0").value) || 0.0;
+    var l1 = parseFloat(document.getElementById("input_l1").value) || 0.0;
+    var P = parseFloat(document.getElementById("input_P").value) || 0.0;    
     var KP = function(a,b,w,l0,l1){
         var inputs = tf.tensor([[a/b, w/b, l0/b, l1/b]]);
         var outputs = model.predict(inputs).dataSync();

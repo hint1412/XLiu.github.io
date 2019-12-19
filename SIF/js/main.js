@@ -17,7 +17,7 @@ function displayme(){
         var inputs = tf.tensor([[a/b, w/b, l0/b, l1/b]]);
         var outputs = model.predict(inputs).dataSync();
         var kop = outputs*l1*Math.pow(a, 0.5)/b/w/w;
-        return kop;
+        return kop || 0.0;
     };
     var KP_o = KP(a,b,w,l0,l1);
     var K_o = KP(a,b,w,l0,l1)*P;

@@ -1,6 +1,6 @@
 ## A Machine Learning Solution for Fracture Toughness Measurements
 
-Xing Liu, PhD candidate, School of Engineering, Brown University
+Xing Liu, PhD candidate, School of Engineering, Brown University, Providence, RI 02912, USA
 
 xing_liu@brown.edu
 

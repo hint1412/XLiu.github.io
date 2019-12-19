@@ -21,12 +21,12 @@ function displayme(){
     };
     var KP_o = KP(a,b,w,l0,l1);
     var K_o = KP(a,b,w,l0,l1)*P;
-    document.getElementById("Intp").innerHTML = 'Extrapolation';    
+    document.getElementById("Intp").textContent = 'Extrapolation';    
     if (a/b >= 0.1 && a/b <= 0.8) {
         if (w/b >= 1.0 && w/b <= 3.0) {
             if (l0/b >= 0.1 && l0/b <= 0.4) {
                 if (l1/b >= 2.0 && l1/b <= 5.0) {
-                    document.getElementById("Intp").innerHTML = 'Interpolation';                    
+                    document.getElementById("Intp").textContent = 'Interpolation';                    
                 }
             }
         }        

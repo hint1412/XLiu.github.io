@@ -39,7 +39,7 @@ load the model
 */
 async function start() { 
     //load the model
-    model = await tf.loadLayersModel('models/model.json', strict=false)
+    model = await tf.loadLayersModel('models/NN_4_64_64_1/model.json')
     
     //warm up 
     var a = tf.tensor([[1, 1, 1, 1]]);

@@ -1,6 +1,6 @@
 ## Neural Network-based solutions
 
-+ **Architecture: 4/64/64/1**
++ **Architecture: 4/16/8/1, 4/32/32/1, 4/64/64/1**
 
 + **Input:**
 

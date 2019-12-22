@@ -1,6 +1,6 @@
 @font-face{ 
     font-family: 'MyWebFont';
-    src: url('../css/lmroman10-italic-webfont.woff');
+    src: url('lmroman10-italic-webfont.woff');
     font-weight: normal;
     font-style: normal;
 } 

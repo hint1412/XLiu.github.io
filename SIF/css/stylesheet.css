@@ -1,12 +1,16 @@
-@font-face {
-    font-family: 'latin_modern_roman10_italic';
-    src: url('lmroman10-italic-webfont.eot');
-    src: url('lmroman10-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lmroman10-italic-webfont.woff2') format('woff2'),
-         url('lmroman10-italic-webfont.woff') format('woff'),
-         url('lmroman10-italic-webfont.ttf') format('truetype'),
-         url('lmroman10-italic-webfont.svg#latin_modern_roman10_italic') format('svg');
+@font-face{ 
+    font-family: 'MyWebFont';
+    src: url('../css/lmroman10-italic-webfont.woff');
     font-weight: normal;
     font-style: normal;
+} 
 
-}
+.lm { font-family: 'MyWebFont'; } 
+        
+.lightblue { background-color: #F5FFFA !important; } 
+
+.input-group>.input-group-prepend { flex: 0 0 20% !important; }
+
+.input-group>.input-group-append { flex: 0 0 20% !important; }
+
+.input-group .input-group-text { width: 100% !important; }

@@ -39,7 +39,8 @@ function displayme() {
                       ", L1=" + l1.toFixed(3).toString() +
                       ", P=" + P.toFixed(3).toString() +
                       ", KI=" + K_o.toFixed(3).toString();
-    console.log(str_output);     
+    console.log(str_output);
+    console.log('Empirical:  ' + emp(a,b,w,l1,P).toFixed(3).toString())    
                            
     // outputs 
     if (a/b >= 0.1 && a/b <= 0.8 && w/b >= 1.0 && w/b <= 3.0 &&
@@ -63,6 +64,17 @@ function displayme() {
                                ";" + "&#13;&#10;";          
     }
     elem_outk.value = K_o.toFixed(3);      
+}
+
+/*
+empirical
+*/
+function emp(a,b,w,L,P) {
+    var F = 1.85-3.38*(a/b)+13.24*Math.pow(a/b,2)-23.26*Math.pow(a/b,3)+16.8*Math.pow(a/b,4);
+    var y = (b*b*w/2+w*w/4*(b+w/6))/(b*w+w*w/4);
+    var I = w*Math.pow(b,3)/12+Math.pow(y-b/2,2)*b*w+Math.pow(w,4)/288+Math.pow(w/6+b-y,2)*w*w/4;
+    sigma = P*L*y/I;
+    return sigma*Math.sqrt(Math.PI*a)*F;
 }
 
 /*

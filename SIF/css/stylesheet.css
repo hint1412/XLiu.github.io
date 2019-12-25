@@ -1,23 +1,31 @@
-@font-face{ 
-    font-family: 'MyWebFont';
-    src: url('lmroman10-italic-webfont.woff');
-    font-weight: normal;
-    font-style: normal;
+@font-face { 
+  font-family: 'MyWebFont';
+  src: url('lmroman10-italic-webfont.woff');
 } 
 
-.lm { font-family: 'MyWebFont'; } 
+.lm {font-family: 'MyWebFont';
+  font-weight: normal;
+  font-style: normal;
+} 
         
-.lightblue { background-color: #F5FFFA !important; } 
+.windowcolor {background-color: #FFFFFF !important;} 
 
-.input-group>.input-group-prepend { flex: 0 0 20% !important; }
+/* flex: flex-grow, flex-shrink, and flex-basis */
+.input-group .input-group-prepend {flex: 0 0 25%;}
 
-.input-group>.input-group-append { flex: 0 0 20% !important; }
+.input-group .input-group-append {flex: 0 0 25%;}
 
-.input-group .input-group-text { width: 100% !important; }
+.input-group .input-group-text {width: 100%;}
 
 iframe {
-    frameborder="0";
-    scrolling="no";
-    marginheight="0";
-    marginwidth="0";
+  frameborder: "0";
+  scrolling: "no";
+  marginheight: "0";
+  marginwidth: "0";
 }
+
+#intp {font-weight: bold;}
+
+#status, #history {font-style: italic;
+  color: #0275d8;
+  }

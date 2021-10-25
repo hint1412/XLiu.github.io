@@ -1,4 +1,7 @@
 /*
+Follow the general framework from 'https://github.com/scotthellman/gaussianprocess_js'
+*/
+/*
 variables
 */
 var GPR;

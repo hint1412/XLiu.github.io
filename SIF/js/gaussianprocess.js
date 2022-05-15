@@ -252,7 +252,7 @@ function displayme() {
     
     // evaluation 
     var E2Y = E/Y   
-    var x1 = [$V([E2Y, NU])]
+    var x1 = [$V([(E2Y-10.0)/90.0, (NU-0.15)/0.30])]
     var result = GPR.evaluate(vx,vy,x1);
     var mu = result.mu.elements[0][0];
     var sigma2 = result.sigma2.elements[0][0];

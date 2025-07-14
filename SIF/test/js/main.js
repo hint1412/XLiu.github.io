@@ -69,7 +69,7 @@ load the model
 */
 async function start() { 
     //load the model
-    model = await tf.loadLayersModel('models/odel.json')
+    model = await tf.loadLayersModel('models/model.json')
     
     //warm up 
     var a = tf.tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1]]);

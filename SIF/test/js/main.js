@@ -28,7 +28,7 @@ function displayme() {
     function KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9) {
         var inputs = tf.tensor([[input_1, input_2/10.0, input_3/10.0, input_4*10.0, input_5*10.0, input_6/10.0, input_7/10.0, input_8/10.0, input_9/1000.0]]);
         var outputs = model.predict(inputs).dataSync();
-        var kop = outputs;       
+        var kop = outputs[0];       
         return isFinite(kop) ? kop : 0.0;
     };
     var K_o = KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9);

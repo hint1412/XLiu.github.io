@@ -28,22 +28,23 @@ function displayme() {
     function KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9) {
         var inputs = tf.tensor([[input_1, input_2/10.0, input_3/10.0, input_4*10.0, input_5*10.0, input_6/10.0, input_7/10.0, input_8/10.0, input_9/1000.0]]);
         var outputs = model.predict(inputs).dataSync();
+	console.log('outputs shape:', outputs.shape, outputs.dtype);
         var kop = outputs[0];       
         return isFinite(kop) ? kop : 0.0;
     };
     var K_o = KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9);
     
     // log: C, Mn, Si, P, S, Cu, Ni, Cr
-    var str_output = "C" + input_1.toFixed(3).toString() + 
-                      ", Mn" + input_2.toFixed(3).toString() +
-                      ", Si" + input_3.toFixed(3).toString() +
-                      ", P" + input_4.toFixed(3).toString() +
-                      ", S" + input_5.toFixed(3).toString() +
-                      ", Cu" + input_6.toFixed(3).toString() +
-		      ", Ni" + input_7.toFixed(3).toString() +
-                      ", Cr" + input_8.toFixed(3).toString() +
-                      ", T" + input_9.toFixed(3).toString() +
-                      ", KI=" + K_o.toFixed(3).toString();
+    var str_output = "C" + input_1.toFixed(3) + 
+                      ", Mn" + input_2.toFixed(3) +
+                      ", Si" + input_3.toFixed(3) +
+                      ", P" + input_4.toFixed(3) +
+                      ", S" + input_5.toFixed(3) +
+                      ", Cu" + input_6.toFixed(3) +
+		      ", Ni" + input_7.toFixed(3) +
+                      ", Cr" + input_8.toFixed(3) +
+                      ", T" + input_9.toFixed(3) +
+                      ", KI=" + K_o.toFixed(3);
     console.log(str_output);    
                            
     // outputs 

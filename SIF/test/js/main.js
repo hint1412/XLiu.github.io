@@ -32,7 +32,7 @@ function displayme() {
         return isFinite(kop) ? kop : 0.0;
     };
     var K_o = KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9)*1.0;
-    var K_o = 120.168;
+    
     // log: C, Mn, Si, P, S, Cu, Ni, Cr
     var str_output = "C" + input_1.toFixed(3).toString() + 
                       ", Mn" + input_2.toFixed(3).toString() +
@@ -43,7 +43,7 @@ function displayme() {
 		      ", Ni" + input_7.toFixed(3).toString() +
                       ", Cr" + input_8.toFixed(3).toString() +
                       ", T" + input_9.toFixed(3).toString() +
-                      ", KI=" + K_o.toFixed(3).toString();
+                      ", KI=" + K_o.toString();
     console.log(str_output);    
                            
     // outputs 
@@ -52,7 +52,7 @@ function displayme() {
                            ":  " + str_output + 
                            ";" + "&#13;&#10;";        
         
-    elem_outk.value = K_o.toFixed(3);      
+    elem_outk.value = K_o;      
 }
 
 /*

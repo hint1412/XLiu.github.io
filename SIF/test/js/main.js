@@ -18,7 +18,7 @@ function displayme() {
     var input_4 = parseFloat(document.getElementById("input_4").value) || 0.0;
     var input_5 = parseFloat(document.getElementById("input_5").value) || 0.0;
     var input_6 = parseFloat(document.getElementById("input_6").value) || 0.0;
-	var input_7 = parseFloat(document.getElementById("input_7").value) || 0.0;
+    var input_7 = parseFloat(document.getElementById("input_7").value) || 0.0;
     var input_8 = parseFloat(document.getElementById("input_8").value) || 0.0;
     var input_9 = parseFloat(document.getElementById("input_9").value) || 0.0;
     const elem_outk = document.getElementById("output_K");
@@ -31,7 +31,7 @@ function displayme() {
         var kop = outputs;       
         return isFinite(kop) ? kop : 0.0;
     };
-    var K_o = Math.abs(KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9));
+    var K_o = KP(input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9)*1.0;
     
     // log: C, Mn, Si, P, S, Cu, Ni, Cr
     var str_output = "C" + input_1.toFixed(3).toString() + 
@@ -40,7 +40,7 @@ function displayme() {
                       ", P" + input_4.toFixed(3).toString() +
                       ", S" + input_5.toFixed(3).toString() +
                       ", Cu" + input_6.toFixed(3).toString() +
-					  ", Ni" + input_7.toFixed(3).toString() +
+		      ", Ni" + input_7.toFixed(3).toString() +
                       ", Cr" + input_8.toFixed(3).toString() +
                       ", T" + input_9.toFixed(3).toString() +
                       ", KI=" + K_o.toFixed(3).toString();

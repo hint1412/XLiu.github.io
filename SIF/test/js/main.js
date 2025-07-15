@@ -43,7 +43,7 @@ function displayme() {
 					  ", Ni" + input_7.toFixed(3).toString() +
                       ", Cr" + input_8.toFixed(3).toString() +
                       ", T" + input_9.toFixed(3).toString() +
-                      ", KI=" + K_o.toFixed(3).toString();
+                      ", KI=" + KP.toFixed(3).toString();
     console.log(str_output);    
                            
     // outputs 
@@ -52,7 +52,7 @@ function displayme() {
                            ":  " + str_output + 
                            ";" + "&#13;&#10;";        
         
-    elem_outk.value = K_o.toFixed(3);      
+    elem_outk.value = KP.toFixed(3);      
 }
 
 /*

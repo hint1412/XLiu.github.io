@@ -8,4 +8,4 @@ Open-access ML-based solutions to fracture mechanics problems.
 
 
 ### Contact
-Need more information? Please contact Dr. Xing Liu _via_ email at xing.liu@me.gatech.edu.
+Need more information? Please contact Dr. Xing Liu _via_ email at xing.liu@njit.edu.
